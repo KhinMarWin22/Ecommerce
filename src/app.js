@@ -1,6 +1,10 @@
+
+
+import { addToCardHandaler } from "./cart/addtocard";
 import { Fectdata } from "./categories/feth";
+
 import { clearButton, searchProductHandler } from "./products/searchproduct";
-import { search, searchForm } from "./selector";
+import { cardList, search, searchForm } from "./selector";
 
 class App {
     initialRender(){
@@ -8,8 +12,9 @@ class App {
     };
     listener(){
 searchForm.addEventListener("submit",searchProductHandler);
-search.addEventListener("focus",clearButton)
-    }
+search.addEventListener("focus",clearButton);
+cardList.addEventListener("click",addToCardHandaler)
+    };
     init(){
         console.log("hi");
         this.initialRender();

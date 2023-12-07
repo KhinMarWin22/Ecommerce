@@ -1,3 +1,5 @@
+import { cartData, cartItems, counterCart, totalCost } from "./selector";
+
 export const rateStar = (rate) => {
     let result = "";
     for (let i = 1; i <= 5; i++) {
@@ -12,3 +14,17 @@ export const rateStar = (rate) => {
     }
     return result;
   };
+
+  export const Counter = ()=>{
+    counterCart.forEach((el)=>{
+      el.innerText = cartData.length;
+    })
+  };
+
+  export const TotalCalculate =()=>{
+  let total = 0;
+  cartData.forEach((el)=>{
+    total+= el.price + el.quantity;
+    totalCost.innerText = `${total.toFixed(2)}`;
+  })
+  }

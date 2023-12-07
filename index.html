@@ -74,7 +74,7 @@ color: white;
   </svg>
   
   <span class="sr-only">Notifications</span>
-  <div class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900"><span>0</span></div>
+  <div class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900"><span class="counter">0</span></div>
 </button>
 
        
@@ -607,6 +607,7 @@ color: white;
 
 
 
+
  
   
   
@@ -615,9 +616,9 @@ color: white;
    </section>
 
   <!-- Drawer -->
-  <div id="drawer-right-example" class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-80 dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-right-label">
+  <div id="drawer-right-example" class="fixed  top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-80 dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-right-label">
     <h5 id="drawer-right-label" class="inline-flex items-center  mb-4 text-xl font-semibold text-gray-500 dark:text-gray-400">My cart
-      <span class="px-3 text-md text-center ms-2 rounded-md bg-blue-700 text-white">0</span>
+      <span class="px-3 counter text-md text-center ms-2 rounded-md bg-blue-700 text-white">0</span>
 
     </h5>
    <button type="button" data-drawer-hide="drawer-right-example" aria-controls="drawer-right-example" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 right-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white" >
@@ -627,17 +628,38 @@ color: white;
       <span class="sr-only">Close menu</span>
    </button>
   
-<div class="border flex item-in-cart border-black px-3 py-5 ">
-  <img src="./img/-bts-logo-purple-angle - Copy.png" alt="" class="w-20 border border-black">
-  <p class="">Apple Watchdkkfjkjfkdfjdk</p>
-  <input type="number" class="w-10">
+<div id="cartitem" class="max-h-[500px] overflow-auto  no-scrollbar">
+    <div class=" item-in-carts">
+        
+        
+       
+      
+    
+    
+    </div>
+    
+   
+ 
+   
+    <div class="h-36"></div>
+</div>
+<div class="order-section">
+    <div class="start-0 p-3 absolute bottom-0 z-50 w-full bg-white" >
+              <p class="text-end font-medium mb-2 mt-3  border-t-2 border-neutral-700 text-xl pt-3">$ <span id="totalCost">0</span></p>
+              <button id="orders" type="button" class=" bg-blue-500 rounded-md active:bg-blue-700 hover:bg-blue-600 text-white   d-block w-full py-3  mb-3">
+                Place Order
+              </button>
+            </div>
+          </div>
+
 
 
 </div>
 
 
 
-</div>
+
+
 <footer class="bg-white dark:bg-gray-900 mt-10">
   <div class="container p-6 mx-auto">
       <div class="lg:flex">

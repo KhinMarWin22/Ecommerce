@@ -2,7 +2,8 @@ import { rateStar } from "../function";
 
 export const createProduct =(products)=>{
     const productDiv = document.createElement("div");
-    productDiv.className = "w-full mx-8 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ";
+    productDiv.className = "w-full mx-8 max-w-sm bg-white product-cart border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ";
+    productDiv.setAttribute("product-id",products.id);
  
   productDiv.innerHTML =`  <a href="#">
   <img class="p-8 rounded-t-lg product-img" src="${products.image}" alt="product image" />
@@ -22,7 +23,7 @@ export const createProduct =(products)=>{
   </div>
   <div class="flex items-center justify-between">
       <span class="text-3xl font-bold text-gray-900 dark:text-white">$ <span>${products.price}</span></span>
-      <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 active:bg-blue-950 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</a>
+      <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 add-to-cart-btn focus:outline-none focus:ring-blue-300 active:bg-blue-950 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</a>
   </div>
 </div>`;
 return productDiv;
